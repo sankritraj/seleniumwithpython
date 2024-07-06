@@ -1,0 +1,9 @@
+webdriver-manager
+pytest~=8.2.2
+selenium~=4.22.0
+logger
+pytest-html
+pytest-xdist
+openpyxl
+allure-pytest
+page-objects
