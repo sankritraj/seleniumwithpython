@@ -7,3 +7,4 @@ pytest-xdist
 openpyxl
 allure-pytest
 page-objects
+Selenium-Screenshot

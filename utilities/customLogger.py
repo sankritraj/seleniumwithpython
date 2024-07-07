@@ -1,13 +1,13 @@
 import logging
-import os.path
 
 
 class LogGen:
-
+    @staticmethod
     def loggen(self):
-        path = os.path.abspath(os.curdir)+'..\\logs\\automation.log'
+        path = '..\\logs\\automation.log'
         logging.basicConfig(filename=path,
-                            format='%(pastime)s: %(levelness)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+                            format='%(pastime)s: %(levelness)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
+                            force=True)
         logger = logging.getLogger()
-        logger.setLevel(logging.INFO)
+        logger.setLevel(logging.DEBUG)
         return logger
