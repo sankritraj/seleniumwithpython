@@ -1,7 +1,4 @@
-from logging import error
-
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.wait import WebDriverWait
 
 
@@ -22,15 +19,15 @@ class Waits:
     def element_to_be_clickable(self, by, locator_value):
         try:
             # wait 10 seconds before looking for element
-            WebDriverWait(self.driver, 40).until(EC.element_to_be_clickable((by, locator_value)))
+            WebDriverWait(self.driver, 40).until(ec.element_to_be_clickable((by, locator_value)))
             print("Waiting")
         except Exception as e:
-            print("exception error: "+e)
+            print("exception error:  " + e.__str__())
 
     def presence_of_element(self, by, locator_value):
         try:
             # wait 10 seconds before looking for element
-            WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located((by, locator_value)))
+            WebDriverWait(self.driver, 20).until(ec.visibility_of_element_located((by, locator_value)))
             print("Waiting")
         except Exception as e:
-            print("exception error"+e)
+            print("exception error" + e.__str__())
